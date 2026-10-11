@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <!--Menu-->
+    <div id="menu-container"></div>
+
+    <!--Image Carousel-->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/banner.png" class="d-block w-100" alt="...">
+            </div>
+            </div>
+            <!-- Content here -->
+            <div class="container"> 
+                <!--hero-->
+                <div class="px-4 py-5 my-5 text-center">
+                    <img class="d-block mx-auto mb-4" src="img/logo1.png" alt="" width="350" height="350">
+                    <div class="col-lg-6 mx-auto">
+                        <p class="lead mb-4">"Go2upSkills Thailand's no.1 online course platform. We provide a platform
+                            for experts of any profession to create courses that can be offered to the public. With
+                            Go2upSkills, anybody in can teach and learn online anytime, anywhere."</p>
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Courses</button>
+                            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Register</button>
+                        
+                        </div>
+                        </div>
+      </div>
+    
+             <!--Menu-->
+<div id="menu-container"></div>
+
+   <!--เนื้อหา-->
+<div class="container text-center">
+<h3 class="alert  mt-4">Our Courses</h3> <br>
+ <!--Row1-->
+<div class="row">
+    <section class="card" style="max-width: 400px">
+  <img src="img/c1.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Course 1</h4>
+    <p class="card-text">Learn the basics of web development.</p>
+  </div>
+</section>
+<section class="card" style="max-width: 400px">
+  <img src="img/c2.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Course 2</h4>
+    <p class="card-text">Advance your knowledge in Python programming.</p>
+  </div>
+</section>
+    <section class="card" style="max-width: 400px">
+  <img src="img/c2.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Course 3</h4>
+    <p class="card-text">Master data analysis with Power BI.</p>
+  </div>
+</section>
+    </div>
+     </div>
+
+
+            </div> <!-- end main container -->
+
+            <!-- Footer Container -->
+            <div id="footer"></div>
+
+            <script src="js/bootstrap.bundle.min.js"></script>
+
+            <script>
+                // โหลด menu.html
+                fetch("menu.html")
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById("menu-container").innerHTML = data;
+
+                        const sidebarToggle = document.body.querySelector('#sidebarToggle');
+                        if (sidebarToggle) {
+                            sidebarToggle.addEventListener('click', event => {
+                                event.preventDefault();
+                                document.body.classList.toggle('sb-sidenav-toggled');
+                            });
+                        }
+                    });
+
+                // โหลด footer.html
+                fetch("footer.html")
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById("footer").innerHTML = data;
+                    });
+            </script>
+<!-- Footer Container -->
+  <div id="Footer"></div>
+</body>
+
+</html>
